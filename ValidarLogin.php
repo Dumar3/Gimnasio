@@ -27,21 +27,30 @@
         <title></title>
     </head>
     <body>
-        <form action="principal.php" method="post">         
-        <a href='http://localhost/Gimnasio/principal.php' type="submit"> 
+        <form action="loginAdmin.php" method="post">         
+        <a href='http://localhost/Gimnasio/loginAdmin.php' type="submit"> 
         <img src='http://localhost/Gimnasio/atras.png' hspace='20' width='150' height='150' border='0'></a>
         </form>
-         <font size="4" face="Arial"><b>
-        
-        <?php
-        include("conexion.php");
-        mysqli_query($conexion, "insert into usuarios(cedula,Nombre,Apellidos,fecha_nac,Direccion,Telefono) values 
-             ('$_POST[cedula]','$_POST[Nombre]','$_POST[Apellidos]','$_POST[fecha_nac]','$_POST[Direccion]','$_POST[Telefono]')")
-                or die( "Problemas al registrar tus datos, posbiblemente ya te encuentres registrado, por favor regresa y rectificar tus datos ingresados" );
-        mysqli_close($conexion);
-        echo "El usuario fue registrado con exito!!!!";
-        ?>
-
+         <font size="4" face="Arial"><b>   
+    <?php   
+        include("conexionLogin.php");
+        $Id=$_POST["cedula"];
+        $Pass=$_POST["Nombre"];
+        $SW=false;
+        $C=conexion::Conectar();
+        $Q="select * from usuarios";
+        $R=mysql_query($Q,$C);
+        while($fila=mysql_fetch_array($R)){
+            if($Id==$fila["cedula"] && $Pass==$fila["Nombre"]){
+                $SW=true;
+            }
+        }
+        if($SW==true){
+            echo "BIENVENIDO";
+        }else{
+            echo "Error en los datos";
+        }   
+    ?>
         </b></font>
         </div>
     </body>
