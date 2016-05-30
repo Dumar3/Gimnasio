@@ -29,7 +29,7 @@
     <body>
         <form action="loginAdmin.php" method="post">         
         <a href='http://localhost/Gimnasio/loginAdmin.php' type="submit"> 
-        <img src='http://localhost/Gimnasio/atras.png' hspace='20' width='150' height='150' border='0'></a>
+        <img src='http://localhost/Gimnasio/atras.png' hspace='20' width='100' height='100' border='0'></a>
         </form>
          <font size="4" face="Arial"><b>   
     <?php   

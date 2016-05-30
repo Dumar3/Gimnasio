@@ -26,17 +26,17 @@
     <font size="6" face="Arial"><b> GIMNASIO SPORTGYM </b> <hr/> </font>
     </br>
     <form action="registrarprofesor.php" method="post">       
-        <input type="submit" value="registrar profesor">            
+        <input type="submit" value="Registrar Profesor">            
     </form>
     <form action="crearclase.php" method="post">       
-        <input type="submit" value="crear clase">            
+        <input type="submit" value="Crear Clase">            
     </form>
     <form action="eliminar.php" method="post">       
-        <input type="submit" value="eliminar">
+        <input type="submit" value="Eliminar Usuario">
     </form>
 
     <form action="actualizar1.php" method="post">
-        <input type="submit" value="actualizar">
+        <input type="submit" value="Actualizar Usuario">
     </form>   
 
     <form action="inicio.php" method="post">         
