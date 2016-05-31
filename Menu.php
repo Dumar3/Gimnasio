@@ -28,9 +28,23 @@
     <form action="registrarprofesor.php" method="post">       
         <input type="submit" value="Registrar Profesor">            
     </form>
+
+    <form action="eliminarprofesor.php" method="post">       
+        <input type="submit" value="Eliminar Profesor">            
+    </form>
+
     <form action="crearclase.php" method="post">       
         <input type="submit" value="Crear Clase">            
     </form>
+
+    <form action="Actualizarclase1.php" method="post">       
+        <input type="submit" value="Actualizar Clase">            
+    </form>
+
+    <form action="eliminarclase.php" method="post">       
+        <input type="submit" value="Eliminar Clase">            
+    </form>
+
     <form action="eliminar.php" method="post">       
         <input type="submit" value="Eliminar Usuario">
     </form>

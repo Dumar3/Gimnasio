@@ -35,13 +35,13 @@
     <?php     
         include("conexionLogin.php");
         $Ced=$_POST["cedula"];
-        $Nom=$_POST["Nombre"];
+        $Nom=$_POST["contraseña"];
         $aux=false;
         $Co=conexion::Conectar();
         $Que="select * from administrador";
         $Res=mysql_query($Que,$Co);
         while($fil=mysql_fetch_array($Res)){
-            if($Ced==$fil["cedula"] && $Nom==$fil["Nombre"]){
+            if($Ced==$fil["cedula"] && $Nom==$fil["pass"]){
                 $aux=true;
             }
         }

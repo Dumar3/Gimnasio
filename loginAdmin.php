@@ -12,7 +12,7 @@
 function Validar() {
 
     var Cedula=document.getElementById("Cedula").value;
-    var Nombre=document.getElementById("Nombre").value;
+    var Contra=document.getElementById("contraseña").value;
 
 
     if (Cedula==0) {
@@ -21,9 +21,9 @@ function Validar() {
         return false;
     };
 
-    if (Nombre==0) {
-        alert("Se Neceita Llenar El Campo De Nombre");
-        document.getElementById("Nombre").focus();
+    if (Contra==0) {
+        alert("Se Neceita Llenar El Campo De Contraseña");
+        document.getElementById("contraseña").focus();
         return false;
     };
     form.submit();
@@ -65,8 +65,8 @@ function Validar() {
     <td><input type="text" name="cedula" id="Cedula" size="25" placeholder="Cedula"/></td> 
     </tr>
     <tr>
-    <td><label ><font size="4" face="Arial"><b>Nombre</b></font></label> </td>
-    <td><input type="text" name="Nombre" id="Nombre" size="25" placeholder="Nombre"/> </td>
+    <td><label ><font size="4" face="Arial"><b>Contraseña</b></font></label> </td>
+    <td><input type="password" name="contraseña" id="contraseña" size="25" placeholder="Contraseña"/> </td>
     </tr>
     </table>
     <br>

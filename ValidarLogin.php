@@ -27,21 +27,17 @@
         <title></title>
     </head>
     <body>
-        <form action="loginAdmin.php" method="post">         
-        <a href='http://localhost/Gimnasio/loginAdmin.php' type="submit"> 
-        <img src='http://localhost/Gimnasio/atras.png' hspace='20' width='100' height='100' border='0'></a>
-        </form>
          <font size="4" face="Arial"><b>   
     <?php   
         include("conexionLogin.php");
         $Id=$_POST["cedula"];
-        $Pass=$_POST["Nombre"];
+        $Pass=$_POST["contraseña"];
         $SW=false;
         $C=conexion::Conectar();
         $Q="select * from usuarios";
         $R=mysql_query($Q,$C);
         while($fila=mysql_fetch_array($R)){
-            if($Id==$fila["cedula"] && $Pass==$fila["Nombre"]){
+            if($Id==$fila["cedula"] && $Pass==$fila["pass"]){
                 $SW=true;
             }
         }
@@ -51,6 +47,10 @@
             echo "Error en los datos";
         }   
     ?>
+    <form action="login.php" method="post">         
+        <a href='http://localhost/Gimnasio/login.php' type="submit"> 
+        <img src='http://localhost/Gimnasio/atras.png' hspace='20' width='100' height='100' border='0'></a>
+    </form>
         </b></font>
         </div>
     </body>
