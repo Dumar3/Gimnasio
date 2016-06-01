@@ -45,13 +45,13 @@
         <input type="submit" value="Eliminar Clase">            
     </form>
 
-    <form action="eliminar.php" method="post">       
-        <input type="submit" value="Eliminar Usuario">
-    </form>
-
     <form action="actualizar1.php" method="post">
         <input type="submit" value="Actualizar Usuario">
-    </form>   
+    </form> 
+
+    <form action="eliminar.php" method="post">       
+        <input type="submit" value="Eliminar Usuario">
+    </form> 
 
     <form action="inicio.php" method="post">         
         <a href='http://localhost/Gimnasio/inicio.php' type="submit"> 

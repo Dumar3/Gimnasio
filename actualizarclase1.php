@@ -28,7 +28,7 @@
     <form action="actualizarclase.php" method="post">
         <font size="4" face="Arial"><b> Ingrese el codigo de la clase a actualizar: </b> </font>
         <br><br>       
-        <input type="text" name="cedula"> <br> <br>   
+        <input type="text" name="codigo"> <br> <br>   
         <input type="submit" value="Actualizar">
     </form> 
     <form action="Menu.php" method="post">         

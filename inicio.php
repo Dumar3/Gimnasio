@@ -49,13 +49,9 @@
         <form action="actualizar1.php" method="post">
             <input type="submit" value="actualizar">
         </form>      
- 
 
 
-
-
-
-
+        
 <br>
 <blockquote>
 <font size="20" face="Arial" ><b>misi&oacuten </b></font>
