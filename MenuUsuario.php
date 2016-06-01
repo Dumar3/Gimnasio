@@ -29,7 +29,7 @@
         <input type="submit" value="Reservar Clase">            
     </form>
 
-    <form action="imprimirRecibo.php" method="post">       
+    <form action="imprimir.php" method="post">       
         <input type="submit" value="Imprimir Recibo">            
     </form>
 

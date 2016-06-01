@@ -14,36 +14,6 @@
         font:normal medium/1.4 sans-serif;
         background: linear-gradient(0deg, #C0C0C0, #F8F8F8);
     }
-    table{
-        border-collapse: collapse;
-        width: 100%;
-    }
-    th,td{
-        padding: 0.25rem;
-        border: 1px solid #ccc;
-    }
-    tbody tr:nth-child(odd){
-        background: #eee;
-    }
-    .centro{
-        padding: 0.5rem;
-        background: #484848;
-        color: white;
-        text-align: center;
-        font-size: 21px;
-    }
-    #cuadro{
-        width: 90%;
-        background: #F8F8F8;
-        padding: 25px;
-        margin: 5px auto;
-        border: 3px solid #D8D8D8;
-    }
-    #titulo{
-        width:100%;
-        background: #282828;
-        color: white;
-    }
 
     html, body {
         height: 100%;
