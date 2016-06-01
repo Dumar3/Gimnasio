@@ -26,31 +26,25 @@
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <body>
+    <body>   
          <font size="4" face="Arial"><b>   
-    <?php   
-        include("conexionLogin.php");
-        $Id=$_POST["cedula"];
-        $Pass=$_POST["contraseña"];
-        $SW=false;
-        $C=conexion::Conectar();
-        $Q="select * from usuarios";
-        $R=mysql_query($Q,$C);
-        while($fila=mysql_fetch_array($R)){
-            if($Id==$fila["cedula"] && $Pass==$fila["pass"]){
-                $SW=true;
-            }
+    <?php
+        include("conexion.php");
+        $registros = mysqli_query($conexion, "select codigo from clases
+                        where codigo='$_REQUEST[codigo]'") or
+                die("Problemas en el select:" . mysqli_error($conexion));
+        if ($reg = mysqli_fetch_array($registros)) {
+                mysqli_query($conexion, "update clases set cupos=cupos+1 where codigo='$_REQUEST[codigo]'") or
+                    die("Problemas en el select:" . mysqli_error($conexion));
+                echo "Se reservo la clase con exito";  
+        } else {
+            echo "lo sentimos la clase ya tiene los 20 cupos reservados";
         }
-        if($SW==true){
-            echo "<script>
-                window.location.href='http://localhost/Gimnasio/MenuUsuario.php'
-                </script>";
-        }else{
-            echo "Error en los datos";
-        }   
-    ?>
-    <form action="login.php" method="post">         
-        <a href='http://localhost/Gimnasio/login.php' type="submit"> 
+        mysqli_close($conexion);
+        ?>
+        <br>
+    <form action="reservarClase.php" method="post">         
+        <a href='http://localhost/Gimnasio/reservarClase.php' type="submit"> 
         <img src='http://localhost/Gimnasio/atras.png' hspace='20' width='100' height='100' border='0'></a>
     </form>
         </b></font>

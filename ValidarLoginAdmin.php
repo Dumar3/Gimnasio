@@ -48,11 +48,7 @@
         if($aux==true){
             echo "<script>
                 window.location.href='http://localhost/Gimnasio/Menu.php'
-                </script>";
-            
-            
-             
-    
+                </script>";  
         }else{
             echo "Error en los datos";
         }
