@@ -34,11 +34,9 @@
                         where cedula='$_POST[cedula]'") or
                 die("Problemas en el select:" . mysqli_error($conexion));
         if ($reg = mysqli_fetch_array($registros)) {
-
             $cons = mysqli_query($conexion, "select * from clases
                         where fecha='$_POST[fecha]' and hora='$_POST[hora]'") or
                 die("Problemas en el select:" . mysqli_error($conexion));
-
                 if($R=mysqli_fetch_array($cons)){
                     echo "Ya existe una clase ese dia y a esa hora,por favor regresar y rectificar los datos";
                 }else{

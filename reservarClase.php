@@ -10,9 +10,9 @@
 
 <style type="text/css">
 
-    table{
-        border-collapse: collapse;
-        width: 100%;
+    body{
+        font:normal medium/1.4 sans-serif;
+        background: linear-gradient(0deg, #C0C0C0, #F8F8F8);
     }
 
     html, body {
@@ -37,17 +37,15 @@
     <div align="center">
     <font size="6" face="Arial"><b> GIMNASIO SPORTGYM </b> <hr/> </font>
     </br>
-    <div id="titulo">
     <center><h1>CLASES</h1></center>
-    </div>
     <table>
         <thead>
-            <tr class="centro">
-                <td><font size="5" face="Arial"><b> Codigo</b></font></td>
-                <td><font size="5" face="Arial"><b> Nombre</b></font></td>
-                <td><font size="5" face="Arial"><b> Fecha</b></font></td>
-                <td><font size="5" face="Arial"><b> Hora</b></font></td>
-                <td><font size="5" face="Arial"><b> Profesor</b></font></td>
+            <tr>
+                <td><font size="5" face="Arial"><b>Codigo</b></font></td>
+                <td><font size="5" face="Arial"><b>Nombre</b></font></td>
+                <td><font size="5" face="Arial"><b>Fecha</b></font></td>
+                <td><font size="5" face="Arial"><b>Hora</b></font></td>
+                <td><font size="5" face="Arial"><b>Profesor</b></font></td>
             </tr>
             <tbody>
                 <?php while($row=$resultado->fetch_assoc()){?>
