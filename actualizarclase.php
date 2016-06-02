@@ -52,7 +52,13 @@
                 <input type="text" name="cedulanueva" value="<?php echo $reg['profesor'] ?>">
                 <br>
                 <input type="hidden" name="cedulavieja" value="<?php echo $reg['profesor'] ?>">
-                <br>            
+                <br> 
+                <font size="4" face="Arial"><b> Ingrese el numero de cupos: </b> </font><br>             
+                <br>
+                <input type="text" name="cuponuevo" value="<?php echo $reg['cupos'] ?>">
+                <br>
+                <input type="hidden" name="cupoviejo" value="<?php echo $reg['cupos'] ?>">  
+                <br>           
                 <input type="submit" value="Modificar">
                 <br>
         </form>

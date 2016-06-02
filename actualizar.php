@@ -46,6 +46,12 @@
                 <input type="text" name="telefononuevo" value="<?php echo $reg['Telefono'] ?>">
                 <br>
                 <input type="hidden" name="telefonoviejo" value="<?php echo $reg['Telefono'] ?>">  
+                <br>  
+                <font size="4" face="Arial"><b> Ingrese la nueva contraseña: </b> </font><br>             
+                <br>
+                <input type="text" name="contranueva" value="<?php echo $reg['pass'] ?>">
+                <br>
+                <input type="hidden" name="contravieja" value="<?php echo $reg['pass'] ?>">  
                 <br>            
                 <input type="submit" value="Modificar">
                 <br>

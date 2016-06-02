@@ -1,7 +1,19 @@
+<?php 
+    require('conexion.php') ;
+    $query="SELECT * FROM clases";
+    $resultado=$conexion->query($query);
+?>
+
 <html>
 <title> SPORTGYM</title>
 </head>
 <style type="text/css">
+
+    body{
+        font:normal medium/1.4 sans-serif;
+        background: linear-gradient(0deg, #C0C0C0, #F8F8F8);
+    }
+
     html, body {
         height: 100%;
         width: 100%;
@@ -25,6 +37,38 @@
 <div align="center">
     <font size="6" face="Arial"><b> GIMNASIO SPORTGYM </b> <hr/> </font>
     </br>
+    <center><h1>CLASES</h1></center>
+    <table>
+        <thead>
+            <tr>
+                <td><font size="5" face="Arial"><b>Codigo</b></font></td>
+                <td><font size="5" face="Arial"><b>Nombre</b></font></td>
+                <td><font size="5" face="Arial"><b>Fecha</b></font></td>
+                <td><font size="5" face="Arial"><b>Hora</b></font></td>
+                <td><font size="5" face="Arial"><b>Profesor</b></font></td>
+                <td><font size="5" face="Arial"><b>Cupos</b></font></td>
+            </tr>
+            <tbody>
+                <?php while($row=$resultado->fetch_assoc()){?>
+                <?php 
+                    require('conexion.php') ;
+                    $Q="SELECT Nombre FROM profesores where cedula='$row[profesor]'";
+                    $Con=$conexion->query($Q);
+                ?>
+                <tr>
+                    <?php $Nom=$Con->fetch_assoc() ?>
+                    <td><b><?php echo $row['codigo']; ?></b></td>
+                    <td><b><?php echo $row['Nombre']; ?></b></td>
+                    <td><b><?php echo $row['fecha']; ?></b></td>
+                    <td><b><?php echo $row['hora']; ?></b></td>
+                    <td><b><?php echo $Nom['Nombre']; ?></b></td>
+                    <td><b><?php echo $row['cupos']; ?></b></td>
+                </tr>
+                <?php } ?>                
+            </tbody>
+        </thead>
+    </table>
+    <br>
     <form action="actualizarclase.php" method="post">
         <font size="4" face="Arial"><b> Ingrese el codigo de la clase a actualizar: </b> </font>
         <br><br>       

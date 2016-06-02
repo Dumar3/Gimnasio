@@ -28,6 +28,10 @@
     </head>
     <body>
          <font size="4" face="Arial"><b>
+         <form action="principal.php" method="post">         
+            <a href='http://localhost/Gimnasio/principal.php' type="submit"> 
+            <img src='http://localhost/Gimnasio/atras.png' hspace='20' width='100' height='100' border='0'></a>
+        </form>
         <?php
         include("conexion.php");
         mysqli_query($conexion, "insert into usuarios(cedula,Nombre,Apellidos,fecha_nac,Direccion,Telefono,pass) values 
@@ -36,11 +40,8 @@
         mysqli_close($conexion);
         echo "El usuario fue registrado con exito!!!!";
         ?>
-        <form action="principal.php" method="post">         
-            <a href='http://localhost/Gimnasio/principal.php' type="submit"> 
-            <img src='http://localhost/Gimnasio/atras.png' hspace='20' width='100' height='100' border='0'></a>
-        </form>
         </b></font>
+
         </div>
     </body>
 </html>

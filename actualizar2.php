@@ -38,6 +38,10 @@
                          set Telefono='$_POST[telefononuevo]' 
                         where Telefono='$_POST[telefonoviejo]'") or
                 die("Problemas en el select:" . mysqli_error($conexion));
+        mysqli_query($conexion, "update usuarios
+                         set pass='$_POST[contranueva]' 
+                        where pass='$_POST[contravieja]'") or
+                die("Problemas en el select:" . mysqli_error($conexion));
         echo "Los datos fueron modificados con exito";
     ?>
     <form action="actualizar1.php" method="post">         

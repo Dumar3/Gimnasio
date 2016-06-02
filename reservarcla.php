@@ -34,12 +34,12 @@
                         where codigo='$_REQUEST[codigo]'") or
                 die("Problemas en el select:" . mysqli_error($conexion));
         if ($reg = mysqli_fetch_array($registros)) {
-                mysqli_query($conexion, "update clases set cupos=cupos+1 where codigo='$_REQUEST[codigo]'") or
+                    mysqli_query($conexion, "update clases set cupos=cupos+1 where codigo='$_REQUEST[codigo]'") or
                     die("Problemas en el select:" . mysqli_error($conexion));
-                echo "Se reservo la clase con exito";  
-        } else {
-            echo "lo sentimos la clase ya tiene los 20 cupos reservados";
-        }
+                    echo "Se reservo la clase con exito";
+        }  else {
+                    echo "lo sentimos el codigo de la clase no existe";
+                }       
         mysqli_close($conexion);
         ?>
         <br>

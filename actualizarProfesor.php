@@ -1,7 +1,19 @@
+<?php 
+    require('conexion.php') ;
+    $query="SELECT * FROM profesores";
+    $resultado=$conexion->query($query);
+?>
+
 <html>
 <title> SPORTGYM</title>
 </head>
 <style type="text/css">
+    
+    body{
+        font:normal medium/1.4 sans-serif;
+        background: linear-gradient(0deg, #C0C0C0, #F8F8F8);
+    }
+
     html, body {
         height: 100%;
         width: 100%;
@@ -25,6 +37,30 @@
 <div align="center">
     <font size="6" face="Arial"><b> GIMNASIO SPORTGYM </b> <hr/> </font>
     </br>
+    <center><h1>PROFESORES</h1></center>
+    <table>
+        <thead>
+            <tr>
+                <td><font size="5" face="Arial"><b>Cedula</b></font></td>
+                <td><font size="5" face="Arial"><b>Nombre</b></font></td>
+                <td><font size="5" face="Arial"><b>Apellido</b></font></td>
+                <td><font size="5" face="Arial"><b>Direccion</b></font></td>
+                <td><font size="5" face="Arial"><b>Telefono</b></font></td>
+            </tr>
+            <tbody>
+                <?php while($row=$resultado->fetch_assoc()){?>
+                <tr>
+                    <td><b><?php echo $row['cedula']; ?></b></td>
+                    <td><b><?php echo $row['Nombre']; ?></b></td>
+                    <td><b><?php echo $row['Apellidos']; ?></b></td>
+                    <td><b><?php echo $row['Direccion']; ?></b></td>
+                    <td><b><?php echo $row['Telefono']; ?></b></td>
+                </tr>
+                <?php } ?>                
+            </tbody>
+        </thead>
+    </table>
+    <br>
     <form action="actualizarpro1.php" method="post">
         <font size="4" face="Arial"><b> Ingrese la cedula del profesor a actualizar: </b> </font>
         <br><br>       

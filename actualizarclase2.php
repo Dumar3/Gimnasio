@@ -42,6 +42,10 @@
                          set profesor='$_POST[cedulanueva]' 
                         where profesor='$_POST[cedulavieja]'") or
                 die("Problemas en el select:" . mysqli_error($conexion));
+        mysqli_query($conexion, "update clases
+                         set cupos='$_POST[cuponuevo]' 
+                        where cupos='$_POST[cupoviejo]'") or
+                die("Problemas en el select:" . mysqli_error($conexion));
         echo "Los datos fueron modificados con exito";
     ?>
     <form action="actualizarclase1.php" method="post">         
